@@ -5,10 +5,10 @@ docker-shopware-php
 [![GitHub tag](https://img.shields.io/github/tag/ffuenf/docker-shopware-php.svg)](https://github.com/ffuenf/docker-shopware-php)
 [![Build Status](https://img.shields.io/travis/ffuenf/docker-shopware-php.svg)](https://travis-ci.org/ffuenf/docker-shopware-php)
 [![PayPal Donate](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J2PQS2WLT2Y8W&item_name=Shopware%3a%20docker-shopware-php&item_number=docker-shopware-php&currency_code=EUR)
-[![Build Status](https://img.shields.io/travis/ffuenf/docker-shopware.svg)](https://travis-ci.org/ffuenf/docker-shopware)
-[![Docker Pulls](https://img.shields.io/docker/pulls/ffuenf/shopware-php.svg)](https://hub.docker.com/r/ffuenf/shopware-php/)
-[![Docker Stars](https://img.shields.io/docker/stars/ffuenf/shopware-php.svg)](https://hub.docker.com/r/ffuenf/shopware-php/)
-[![Docker Layers](https://badge.imagelayers.io/ffuenf/shopware-php.svg)](https://imagelayers.io/?images=ffuenf/shopware-php:latest)
+[![Build Status](https://img.shields.io/travis/ffuenf/docker-shopware-php.svg)](https://travis-ci.org/ffuenf/docker-shopware-php)
+[![Docker Pulls](https://img.shields.io/docker/pulls/ffuenf/docker-shopware-php.svg)](https://hub.docker.com/r/ffuenf/docker-shopware-php/)
+[![Docker Stars](https://img.shields.io/docker/stars/ffuenf/docker-shopware-php.svg)](https://hub.docker.com/r/ffuenf/docker-shopware-php/)
+[![Docker Layers](https://badge.imagelayers.io/ffuenf/shopware-php.svg)](https://imagelayers.io/?images=ffuenf/docker-shopware-php:latest)
 
 A docker image containing php/apache for local shopware development.
 This is intended to use in conjubnction with [docker-shopware-mysql](https://github.com/ffuenf/docker-shopware-mysql).
