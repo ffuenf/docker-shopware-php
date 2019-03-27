@@ -11,7 +11,7 @@ docker-shopware-php
 [![Docker Layers](https://badge.imagelayers.io/ffuenf/shopware-php.svg)](https://imagelayers.io/?images=ffuenf/docker-shopware-php:latest)
 
 A docker image containing php/apache for local shopware development.
-This is intended to use in conjubnction with [docker-shopware-mysql](https://github.com/ffuenf/docker-shopware-mysql).
+This is intended to use in conjunction with [docker-shopware-mysql](https://github.com/ffuenf/docker-shopware-mysql).
 
 Base Image
 ----------
