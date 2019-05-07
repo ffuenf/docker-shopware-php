@@ -7,6 +7,8 @@ RUN apt-get update -qq && apt-get install -y -qq \
     libicu-dev \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
+    libwebp-dev \
+    libxpm-dev \
     libpng-dev \
     libcurl4-openssl-dev \
     software-properties-common \
@@ -31,7 +33,7 @@ RUN apt-get update -qq && apt-get install -y -qq \
     jpegoptim \
     optipng
 
-RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-webp-dir=/usr/include/ \
     && docker-php-ext-install gd \
     && docker-php-ext-install opcache \
     && docker-php-ext-install zip \

@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of docker-shopware-php.
 
+## 1.2.0 (May 7, 2019)
+
+* add webp support
+
 ## 1.1.0 (March 27, 2019)
 
 * add calendar module
