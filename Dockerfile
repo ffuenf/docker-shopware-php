@@ -71,6 +71,12 @@ ADD timezone.ini /usr/local/etc/php/conf.d/timezone.ini
 
 RUN a2enmod rewrite
 RUN a2enmod ssl
+RUN a2enmod headers
+RUN a2enmod expires
+RUN a2enmod negotiation
+RUN a2enmod autoindex
+RUN a2enmod deflate
+RUN a2enmod alias
 
 WORKDIR /var/www/html
 
