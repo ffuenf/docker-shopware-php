@@ -12,18 +12,18 @@ RUN apt-get update -qq && apt-get install -y -qq \
     libpng-dev \
     libcurl4-openssl-dev \
     software-properties-common \
-    libcurl3 curl \
+    curl \
     git \
     zip \
     unzip \
     inotify-tools \
     apt-utils \
-    ssmtp \
+    msmtp \
     libxml2-dev \
     libxslt1-dev \
     zlib1g-dev \
     git \
-    mysql-client \
+    default-mysql-client \
     sshpass \
     gnupg \
     nano \
@@ -60,7 +60,7 @@ RUN apt-get update && apt-get install -y -qq \
     docker-php-ext-enable imagick && \
     cd ../ && rm -rf imagick
 
-RUN echo "mailhub=mailcatcher:1025\nUseTLS=NO\nFromLineOverride=YES" > /etc/ssmtp/ssmtp.conf
+RUN echo "account mailcatcher\nhost localhost\nport 1025\nauto_from on\naccount default: mailcatcher" > /etc/msmtprc
 
 COPY server-apache2-vhosts.conf /etc/apache2/sites-enabled/000-default.conf
 ADD server-apache2-run-as.conf /etc/apache2/conf-available
