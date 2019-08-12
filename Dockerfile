@@ -1,4 +1,4 @@
-FROM php:7.2-apache
+FROM php:7.3-apache
 
 MAINTAINER Achim Rosenhagen <a.rosenhagen@ffuenf.de>
 
@@ -14,6 +14,8 @@ RUN apt-get update -qq && apt-get install -y -qq \
     software-properties-common \
     curl \
     git \
+    libzip-dev \
+    libzip4 \
     zip \
     unzip \
     inotify-tools \

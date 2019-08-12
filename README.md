@@ -16,7 +16,7 @@ This is intended to use in conjunction with [docker-shopware-mysql](https://gith
 Base Image
 ----------
 
-[php:7.2-apache](https://hub.docker.com/_/php)
+[php:7.3-apache](https://hub.docker.com/_/php)
 
 Development
 -----------

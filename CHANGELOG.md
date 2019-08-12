@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of docker-shopware-php.
 
+## 1.3.1 (August 12, 2019)
+
+* update to PHP 7.3
+
 ## 1.3.0 (August 6, 2019)
 
 * update to debian buster
