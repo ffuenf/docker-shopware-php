@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of docker-shopware-php.
 
+## 2.0.0-dev (February 06, 2020)
+
+* minimal fpm image for shopware6
+
 ## 1.3.2 (August 22, 2019)
 
 * update ssl settings
