@@ -1,4 +1,4 @@
-<a href="http://www.ffuenf.de" title="ffuenf - code • design • e-commerce"><img src="https://github.com/ffuenf/Ffuenf_Common/blob/master/skin/adminhtml/default/default/ffuenf/ffuenf.png" alt="ffuenf - code • design • e-commerce" /></a>
+<a href="https://www.ffuenf.de" title="ffuenf - code • design • e-commerce"><img src="https://raw.githubusercontent.com/ffuenf/Ffuenf_Common/master/skin/adminhtml/default/default/ffuenf/ffuenf.png" alt="ffuenf - code • design • e-commerce" /></a>
 
 docker-shopware-php
 ===================
