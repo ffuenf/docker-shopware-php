@@ -8,7 +8,7 @@ docker-shopware-php
 [![Build Status](https://img.shields.io/travis/ffuenf/docker-shopware-php.svg)](https://travis-ci.org/ffuenf/docker-shopware-php)
 [![Docker Pulls](https://img.shields.io/docker/pulls/ffuenf/docker-shopware-php.svg)](https://hub.docker.com/r/ffuenf/docker-shopware-php/)
 [![Docker Stars](https://img.shields.io/docker/stars/ffuenf/docker-shopware-php.svg)](https://hub.docker.com/r/ffuenf/docker-shopware-php/)
-[![Docker Layers](https://badge.imagelayers.io/ffuenf/shopware-php.svg)](https://imagelayers.io/?images=ffuenf/docker-shopware-php:latest)
+[![Docker Layers](https://images.microbadger.com/badges/image/ffuenf/docker-shopware-php.svg)](https://microbadger.com/images/ffuenf/docker-shopware-php)
 
 A docker image containing php/apache for local shopware development.
 This is intended to use in conjunction with [docker-shopware-mysql](https://github.com/ffuenf/docker-shopware-mysql).
@@ -16,7 +16,7 @@ This is intended to use in conjunction with [docker-shopware-mysql](https://gith
 Base Image
 ----------
 
-[php:7.3-apache](https://hub.docker.com/_/php)
+[php:7.4-apache](https://hub.docker.com/_/php)
 
 Development
 -----------
@@ -37,7 +37,7 @@ License and Author
 ------------------
 
 - Author:: Achim Rosenhagen (<a.rosenhagen@ffuenf.de>)
-- Copyright:: 2019, ffuenf
+- Copyright:: 2020, ffuenf
 
 The MIT License (MIT)
 

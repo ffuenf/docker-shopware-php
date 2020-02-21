@@ -35,8 +35,7 @@ RUN apt-get update -qq && apt-get install -y -qq \
     jpegoptim \
     optipng
 
-RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-webp-dir=/usr/include/ \
-    && docker-php-ext-install gd \
+RUN docker-php-ext-install gd \
     && docker-php-ext-install opcache \
     && docker-php-ext-install zip \
     && docker-php-ext-install intl \
@@ -45,6 +44,7 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
     && docker-php-ext-install bcmath \
     && docker-php-ext-install sockets \
     && docker-php-ext-install calendar \
+    && docker-php-ext-configure gd \
     && docker-php-ext-configure calendar
 
 RUN pecl install apcu
