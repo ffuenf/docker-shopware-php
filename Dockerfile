@@ -35,7 +35,8 @@ RUN apt-get update -qq && apt-get install -y -qq \
     jpegoptim \
     optipng
 
-RUN docker-php-ext-install gd \
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
+    && docker-php-ext-install gd \
     && docker-php-ext-install opcache \
     && docker-php-ext-install zip \
     && docker-php-ext-install intl \
