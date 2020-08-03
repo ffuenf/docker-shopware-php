@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of docker-shopware-php.
 
+## 1.3.6 (August 3, 2020)
+
+* add php mysqli extension
+
 ## 1.3.3 (February 21, 2020)
 
 * update to PHP 7.4

@@ -41,6 +41,7 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
     && docker-php-ext-install zip \
     && docker-php-ext-install intl \
     && docker-php-ext-install pdo_mysql \
+    && docker-php-ext-install mysqli \
     && docker-php-ext-install soap \
     && docker-php-ext-install bcmath \
     && docker-php-ext-install sockets \
