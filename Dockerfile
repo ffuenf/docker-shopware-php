@@ -1,4 +1,4 @@
-FROM php:7.4.8-apache
+FROM php:7.4.9-apache
 
 MAINTAINER Achim Rosenhagen <a.rosenhagen@ffuenf.de>
 
