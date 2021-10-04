@@ -18,6 +18,6 @@ after_success:
 - pip install --user awscli
 - export PATH=$PATH:$HOME/.local/bin
 - eval $(aws ecr get-login --region eu-central-1)
-- docker build -t my_example_app .
+- docker build -t docker-shopware-php .
 - docker tag $DOCKER_IMAGE public.ecr.aws/u0v0e3b1/$DOCKER_IMAGE
 - docker push public.ecr.aws/u0v0e3b1/$DOCKER_IMAGE
