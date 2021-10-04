@@ -19,5 +19,5 @@ after_success:
 - export PATH=$PATH:$HOME/.local/bin
 - eval $(aws ecr get-login --region eu-central-1)
 - docker build -t my_example_app .
-- docker tag $DOCKER_IMAGE public.ecr.aws/ffuenf/$DOCKER_IMAGE
-- docker push public.ecr.aws/ffuenf/$DOCKER_IMAGE
+- docker tag $DOCKER_IMAGE public.ecr.aws/u0v0e3b1/$DOCKER_IMAGE
+- docker push public.ecr.aws/u0v0e3b1/$DOCKER_IMAGE
