@@ -1,6 +1,4 @@
-FROM php:8.0.11-apache
-
-MAINTAINER Achim Rosenhagen <a.rosenhagen@ffuenf.de>
+FROM php:8.0.11-apache-bullseye
 
 RUN apt-get update -qq && apt-get install -y -qq \
     build-essential \
