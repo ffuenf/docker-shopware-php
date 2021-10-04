@@ -1,4 +1,5 @@
 sudo: required
+language: php
 services:
 - docker
 script:
@@ -6,4 +7,14 @@ script:
 env:
   global:
   - TAG_PATTERN="^[0-9]+(\.[0-9]+){2}(-(alpha|beta|rc))?$"
-  - DOCKER_IMAGE=ffuenf/docker-shopware-php:${TRAVIS_TAG:=$TRAVIS_BUILD_NUMBER}
+  - DOCKER_IMAGE=docker-shopware-php:${TRAVIS_TAG:=$TRAVIS_BUILD_NUMBER}
+  - secure: q5l1qQkWn7Q6v33fQyICn2rSP7X7jFZpGUwqRLcCEFhAkCUO9I4oiXtq9URBZCGmghfEKtJU9HPmzxxeXwlg/ZKSUj/6zzVUDcPuBgfc828qC/Z8GQZWlTETpZ6np9JJbzqKL39Y6GjyXZoOfAQimP0Vm7q7OgNC+RMqog+g+8/hR6aQcUOvvimrcyyfaHcv49RnycxwWUE6rKLo4QaSFtd7Am2xN6YimeWD+khTwFzBBq+aT2fAKftf8kPb1SU3HdV4pORk+IrlkjRmDHKS75e2CBhRQWg1PsBlS2JxwDbbTi5YU/PjT8t6vvdsgrbtfmuhVBbrltcini97bUhGEFMdob/oGWw9FNe/v204fmkw5z5nakGF48pOLMOdYcANfbbynR/yBwASaeGqhDzLqb6rM2q3fV3BJSQBUg/MAfImk6yBVtjTKfoh/h7b/rA8E6Nkg8VHl5i/licPHf9FD/aA129abv1bq0bAMVjZ9BUrp11usbMHzLQCODlgdjVkBz+Ybe0gaVOAQwygZP4iSEJvWx1S2BHN/agbeTrq4xBB2+Cxk1Q8QtDDAPj5FxUgUv7qy3aJIve+RsNAL3jqW4/hos4xFHEsVsPvNOfX1jeYMMmKtMXpH2ZQRwv/qXvaR5OTktducZL/20zAPWaUr3NgBe/LHYgGbeJwGlXYZgA=
+  - secure: e7MuEan/pvHSdwURwnb3QTK74SL8OOY9G6Q3E0yp//F2az8LtBRaadH1s9p+ITCm4PFwysUGH1VOdmSZ7wzEP7XbtSGPoGi9boNVcKNSWVJUrdnCd5cFgc96HDOg29u7PuuoqqNfWK44YQjLyJer614lR4JO0BkYd47cZg2s6+a+UXX6RWxhMWgx6MfbmGCediqYYwtsM0msX+K7IkJLSD1HK8/E8BHzjPNx1epMdTihuPQAh/k7lne1nUvP41GGQzuWnTvI5MXXrDD5qRVUKvTtiUcvOvNYCtW4lntlCztQZTqEimkFlAtOz+m98FM6mhph3QtVrVhWKcB5o6Y72DywpYU2aCrQ2hHIypfehGkl1JkYe+1Ug708x1cAz+6NVDaaOBwUYcHiQq6wJLWGFY/FZhne+Uk/Tcru4wva4Kd3Odp0Ht0nTLam3kugLfFrvb+GZWOd98RWp32XMou5KTVYazMswHcD8ZyGD8H19cfR1n5Mh3TdtRgljEcAtj/WGoKzzV+9hG3wAJTzr3HK9SQLlbdorPhrYcHLJhtCozwtYsJbYc7iDSJq7lJOSl2O7M+yuw2Yo+V5Fw4/bIbkHpOLbw0M6Q5Yg2VfdSx99ETjQedBI+B715U/Yt/R/tHxX5DdGyTpnLSQL1DVayPmm54B6kmd37eBqnmiRDcriH0=
+after_success:
+- docker --version
+- pip install --user awscli
+- export PATH=$PATH:$HOME/.local/bin
+- eval $(aws ecr get-login --region eu-central-1)
+- docker build -t my_example_app .
+- docker tag $DOCKER_IMAGE public.ecr.aws/ffuenf/$DOCKER_IMAGE
+- docker push public.ecr.aws/ffuenf/$DOCKER_IMAGE
